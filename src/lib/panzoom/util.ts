@@ -165,6 +165,9 @@ export function zoomFitToScreen() {
 export function keepZoomStart() {
   panAlign('center', 'top');
 }
+export function keepZoomTopRight() {
+  panAlign('right', 'top');
+}
 
 export function zoomDefault() {
   const zoomDefault = get(settings).zoomDefault;
@@ -180,6 +183,9 @@ export function zoomDefault() {
       return;
     case 'keepZoomStart':
       keepZoomStart();
+      return;
+    case 'keepZoomTopRight':
+      keepZoomTopRight();
       return;
   }
 }
